@@ -1,0 +1,4 @@
+services:
+  plugin.manager.prepopulate:
+    class: Drupal\entity_reference_prepopulate\EntityReferencePrePopulatePluginManager
+    parent: default_plugin_manager
