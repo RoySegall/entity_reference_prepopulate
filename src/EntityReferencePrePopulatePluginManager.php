@@ -28,8 +28,8 @@ class EntityReferencePrePopulatePluginManager extends DefaultPluginManager {
    *   The module handler to invoke the alter hook with.
    */
   public function __construct(\Traversable $namespaces, CacheBackendInterface $cache_backend, ModuleHandlerInterface $module_handler) {
-    parent::__construct('Plugin/PrePopulate', $namespaces, $module_handler, 'Drupal\entity_reference_prepopulate\Annotation\prepopulate');
-    $this->alterInfo('message_notifier_alter');
+    parent::__construct('Plugin/PrePopulate', $namespaces, $module_handler, 'Drupal\entity_reference_prepopulate\Annotation\PrePopulate');
+    $this->alterInfo('entity_reference_prepopulate');
     $this->setCacheBackend($cache_backend, 'entity_reference_prepopulate_plugins');
   }
 
